@@ -309,20 +309,6 @@ endfunction
 
 
 "
-" " debug
-"
-
-function SBPrintStatus()
-
-    for win_pair in items(g:_sb_scrollbar_windows)
-        let position = nvim_win_get_position(win_pair[1])
-        echo ""
-    endfor
-
-endfunction
-
-
-"
 " " initialize plugin
 "
 
