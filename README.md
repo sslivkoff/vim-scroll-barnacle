@@ -21,14 +21,14 @@ a scrollbar for vim in the terminal
 
 #### Functions
 - change scrollbar state with
+    - `:ScrollbarToggle`
     - `:ScrollbarOn`
     - `:ScrollbarOff`
-    - `:ScrollbarToggle`
 - can bind to keys e.g. `nnoremap <silent> <F1> :ScrollbarToggle<cr>`
 
 
 #### Configuration
-- put these in your vimrc, e.g. `let g:sb_default_behavior = "always"`
+- can put these in your vimrc, e.g. `let g:sb_default_behavior = "always"`
 - `g:sb_default_behavior` whether scrollbar is on by default (default = `"overflow"`)
     - `"always"`: scrollbar always on
     - `"overflow"`: scrollbar on when buffer does not fit in window
@@ -38,8 +38,9 @@ a scrollbar for vim in the terminal
     - `"left dot"` dot scrollbar using `⠁⠂⠄⡀⠃⠆⡄⠇⡆⡇`
     - `"right dot"` dot scrollbar using `⠈⠐⠠⢀⠘⠰⢠⠸⢰⢸`
     - `"double dot"` dot scrollbar using `⠉⠒⠤⣀⠛⠶⣤⠿⣶⣿`
-- `g:sb_patch_mouse` whether to patch mouse for mouse click events, see below
-- `g:sb_patch_keys` whether to patch certain keys for scroll events, see below
+- `g:sb_patch_mouse` whether to patch mouse for mouse click events (default = `1`)
+    - see section below
+- `g:sb_patch_keys` whether to patch certain keys for scroll events (default = `1`)
 - `ScrollbarBar` highlight group
     - change scrollbar color using the `Scrollbar` highlight group
     - e.g.
@@ -69,7 +70,7 @@ a scrollbar for vim in the terminal
     - You can disable this patching with `let g:sb_patch_keys = 0`
 - Does not work with tabs
     - This is because there is no way to close floating windows in a tab when it is closed. Attempting to close the window results in an error.
-    - A neovim patch is in the works, see [issue](https://github.com/neovim/neovim/issues/11440) and [wip PR](https://github.com/neovim/neovim/pull/11938)
+    - A neovim patch is in the works, see [issue](https://github.com/neovim/neovim/issues/11440) and [WIP PR](https://github.com/neovim/neovim/pull/11938)
 
 
 ## Related Projects
