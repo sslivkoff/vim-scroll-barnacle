@@ -106,10 +106,6 @@ function SBCreateContents()
     let subblocks_in_first_block = n_subblocks_per_block - int_first_subblock % n_subblocks_per_block
     let subblocks_in_last_block = 1 + int_last_subblock % n_subblocks_per_block
 
-    " echo "n_subblocks " . string(n_subblocks) . ", int_first_subblock " . string(int_first_subblock) . ", int_first_block " . string(int_first_block)
-    " echo "int_last_block " . string(int_last_block) . ", int_last_subblock " .  string(int_last_subblock) . ", subblocks_in_last_block" . string(subblocks_in_last_block)
-
-
     let contents = []
     let b = 0
     while b < n_total_blocks
@@ -123,18 +119,12 @@ function SBCreateContents()
                 let contents = contents + [fill_glyph]
             else
                 " subblock rendering
-                " let n_subblocks_in_only_block = subblocks_in_last_block - subblocks_in_first_block
-                " echo "n_subblocks_in_only_block " . n_subblocks_in_only_block
                 let first_subblock_in_block = n_subblocks_per_block - subblocks_in_first_block
-                " echo "first_subblock_in_block " . first_subblock_in_block
                 let glyph = subblock_glyphs[n_subblocks][first_subblock_in_block]
-                " echo "glyph " . glyph
                 let contents = contents + [glyph]
             endif
         elseif b == int_first_block
             " top block
-            " echo "used " . upper_block_glyphs[subblocks_in_first_block]
-            " echo "subblocks_in_first_block " . subblocks_in_first_block
             let contents = contents + [upper_block_glyphs[subblocks_in_first_block]]
         elseif int_first_block < b && b < int_last_block
             " middle block
@@ -150,9 +140,7 @@ function SBCreateContents()
         let b = b + 1
     endwhile
 
-    " echo contents
     return contents
-
 endfunction
 
 
