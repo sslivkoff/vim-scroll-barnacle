@@ -76,4 +76,5 @@ a scrollbar for vim in the terminal
 ## Related Projects
 - https://github.com/lornix/vim-scrollbar
 - https://github.com/gcavallanti/vim-noscrollbar
+- https://github.com/drzel/vim-line-no-indicator
 
