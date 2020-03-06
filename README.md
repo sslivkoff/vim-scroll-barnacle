@@ -41,7 +41,7 @@ a scrollbar for vim in the terminal
 - `g:sb_patch_mouse` whether to patch mouse for mouse click events (default = `1`)
     - see section below
 - `g:sb_patch_keys` whether to patch certain keys for scroll events (default = `1`)
-- `ScrollbarBar` highlight group
+- `Scrollbar` highlight group
     - change scrollbar color using the `Scrollbar` highlight group
     - e.g.
         - `highlight Scrollbar guifg=grey`
