@@ -37,7 +37,7 @@ function SBAddScrollbar()
     let w:win = nvim_open_win(w:scrollbuf, 0, opts)
 
     " configure window
-    call nvim_win_set_option(w:win, "winhl", "Normal:ScrollbarBar")
+    call nvim_win_set_option(w:win, "winhl", "Normal:Scrollbar")
     let window = nvim_get_current_win()
     let g:_sb_scrollbar_windows[window] = w:win
     call nvim_set_current_win(w:win)
