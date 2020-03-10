@@ -51,7 +51,7 @@ a scrollbar for vim in the terminal
 
 ## Implementation
 - uses floating window, window has filetype `scrollbar`
-- [gifine](https://github.com/leafo/gifine) used for creating the gif in this readme
+- [gifine](https://github.com/leafo/gifine) and [vim-smoothie](https://github.com/psliwka/vim-smoothie) used for creating the gif in this readme
 - weclome to suggestions, bug reports, and pull requests
 
 
