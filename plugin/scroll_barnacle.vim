@@ -48,6 +48,9 @@ function SBAddScrollbar()
     call nvim_set_current_win(window)
     let w:_sb_has_scrollbar = 1
 
+    " set sidescrolloff to width of scrollbar for proper horizontal scrolling
+    set sidescrolloff=1
+
 endfunction
 
 
