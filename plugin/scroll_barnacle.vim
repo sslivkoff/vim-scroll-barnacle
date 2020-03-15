@@ -41,10 +41,15 @@ function SBAddScrollbar()
     let window = nvim_get_current_win()
     let g:_sb_scrollbar_windows[window] = w:win
     call nvim_set_current_win(w:win)
+
+    " settings for scrollbar floating window
     set filetype=scrollbar
     let w:original_window = window
     syntax match ScrollBlockBottom /[ ▁▂▃▄▅▆▇█]r/
     highlight ScrollBlockBottom gui=reverse
+    set nowrap
+
+    " change focus back to original window
     call nvim_set_current_win(window)
     let w:_sb_has_scrollbar = 1
 
