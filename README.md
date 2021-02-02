@@ -3,7 +3,7 @@
 
 a scrollbar for vim in the terminal
 
-![vim-scroll-barnacle demo](https://sslivkoff.github.io/repos/vim-scroll-barnacle/images/demo.gif)
+![vim-scroll-barnacle demo](demo.gif)
 
 
 ## Features
